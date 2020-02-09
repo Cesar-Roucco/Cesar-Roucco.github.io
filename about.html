@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 
 <!----- HEADER  ------->
 
@@ -10,7 +7,7 @@
   <title>About</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
@@ -25,6 +22,80 @@
       background-color: #d2d2d2;
       padding: 25px;
     }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    html {
+      box-sizing: border-box;
+    }
+
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    .column {
+      float: left;
+      width: 100%;
+      margin-bottom: 16px;
+      padding: 0 8px;
+    }
+
+    .card {
+      box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.2);
+      margin: 8px;
+    }
+
+    .about-section {
+      padding: 40px;
+      text-align: center;
+      background-color: #474e5d;
+      color: white;
+    }
+
+    .container {
+      padding: 0 16px;
+    }
+
+    .container::after, .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .title {
+      color: grey;
+    }
+
+    .button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #D3D3D3;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .button:hover {
+      background-color: #555;
+    }
+
+    @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+      }
+    }
+
   </style>
 </head>
 
@@ -34,59 +105,43 @@
 
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Portfolio</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="index.html">Home</a></li>
-        <li class="active"><a href="#">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="projects.html">Projects</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
+<!-- Navigation -->
+<nav class="w3-bar w3-black">
+  <a href="index.html" class="w3-button w3-bar-item">Home</a>
+  <a href="about.html" class="w3-button w3-bar-item">About</a>
+  <a href="contact.html" class="w3-button w3-bar-item">Contact</a>
+  <a href="projects.html" class="w3-button w3-bar-item">Projects</a>
+</nav>
 <!-- About me -->
 
-<div class="container-fluid bg-3 text-center" style="margin-top: 60px;">
-  <h1>About Me</h1><br>
-  <h4><i>Electrical and Computer Engineering student at the University of Virginia</i></h4><br>
-  <div class="container">
-    <img src="media/landscape.jpg" class="img-responsive" style="width:100%" alt="Image">
-    <div class="w3-container w3-center w3-content top-left">My name is Cesar and I will be graduating from UVA with a double majoring in Electrical and Computer Engineering with a minor in Design Integration. My main interests lie in the fields of embedded systems design, hardware and software engineering, mechatronics and robotics.
 
-    While at UVA, I have been part of the Technology Leaders Program (TLP), the Society of Hispanic Professional Engineers (SHPE), the Mechatronics and Robotics Society (MARS), as well as an undergradute research asisstant at the Robust Low Power VLSI Research Lab. I am very passionate about engineering and design, but in my free time I enjoy sketching, making art, hiking and playing sports.
-    ​
-    Being part of the TLP has allowed me to collaborate with fellow engineering student of different disciplines in a variety of projects, some of which are included in this portfolio. </div>
-    <style type="text/css">
-      .container {
-    position: relative;
-    text-align: left;
-    color: white;
-    font-size: 1.4vw;
-    }
 
-    /* Bottom left text */
-    .top-left {
-        position: absolute;
-        top: 100px;
-        left: 40px;
-        margin-right: 350px;
-    }
-    </style>
+<div class="about-section">
+  <h1>About Me</h1>
+  <p>Electrical and Computer Engineering student at the University of Virginia</p>
+</div>
+
+<h2 style="text-align:center"></h2>
+<div class="row" style="margin-left: 120px;margin-right: 120px;">
+  <div class="column">
+    <div class="card">
+      <img src="media/landscape.jpg" alt="Cesar" style="width:50%">
+      <div class="container">
+        <h2>Cesar Roucco</h2>
+        <p class="title">Gradute Research Assistant</p>
+        <p>cr3fd@virginia.edu</p>
+        <p><a href="https://www.linkedin.com/in/roucco/">LinkedIn</a></p>
+        <p>I am a graduate student in Computer Engineering at the University of Virginia (UVa) planning on graduating in the spring of 2021. In May 2019, I graduated from UVa with a B.S. in Computer Engineering, a B.S. in Electrical Engineering, and a minor in Design Integration through the Technology Leaders Program. My main interests lie in the fields of embedded systems design, robotics, mechatronics, hardware and software engineering.</p>
+
+        <p>While at UVA, I have been part of the Technology Leaders Program (TLP), the Society of Hispanic Professional Engineers (SHPE), the Mechatronics and Robotics Society (MARS) and the Institute of Electrical and Electronics Engineers (IEEE). I was also an undergraduate research assistant at the Robust Low Power VLSI Research Lab, and the UVA Center for Wireless Health. Lastly, I was an undergraduate teaching assistant for Digital Logic Design (ECE 2330), Probability (APMA 3100), and Computer Architecture and Design (ECE 4435/6435).</p>
+
+        <p>I am very passionate about engineering and design, but in my free time I enjoy sketching, making art, hiking and playing sports.</p>
+        <p><button class="button"><a href="contact.html">Contact</a></button></p>
+      </div>
+    </div>
   </div>
-
-</div><br>
-
+</div>
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-center w3-black w3-large">
