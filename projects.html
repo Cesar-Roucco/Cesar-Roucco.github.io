@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 
 <!----- HEADER  ------->
 
 <head>
-  <title>Projects</title>
+  <title>Cesar Roucco's Engineering Portfolio</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
@@ -20,11 +17,150 @@
       border-radius: 0;
     }
 
+    .mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7, .mySlides8, .mySlides9, .mySlides10 {
+      display: none
+    }
     /* Add a gray background color and some padding to the footer */
     footer {
       background-color: #d2d2d2;
       padding: 25px;
     }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+
+    html {
+      box-sizing: border-box;
+    }
+
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    .column {
+      float: left;
+      width: 33.3%;
+      margin-bottom: 16px;
+      padding: 0 8px;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin: 8px;
+    }
+
+    .container {
+      padding: 0 16px;
+    }
+
+    .container::after, .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .title {
+      color: grey;
+    }
+
+    .button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .button:hover {
+      background-color: #555;
+    }
+
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin:0 auto 25px;
+    }
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    /* On hover, add a grey background color */
+    .prev:hover, .next:hover {
+      background-color: #f1f1f1;
+      color: black;
+    }
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+     @-webkit-keyframes fade {
+     from {
+    opacity: .4
+    }
+    to {
+      opacity: 1
+    }
+    }
+     @keyframes fade {
+     from {
+    opacity: .4
+    }
+    to {
+      opacity: 1
+    }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 600px) {
+    .prev, .next, .text {
+      font-size: 11px
+    }
+    .column {
+        width: 100%;
+        display: block;
+      }
+    }
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+
   </style>
 </head>
 
@@ -41,118 +177,307 @@
   <a href="projects.html" class="w3-button w3-bar-item">Projects</a>
 </nav>
 
-<div class="container-fluid bg-3 text-center" style="margin-left: 100px; margin-right:100px;">
-  <h3>Senior Design Project</h3><br>
-  <p> Collaborated in an interdisciplinary group of 5
-engineering students to design a 3-D printed UGV capable of switching manual and autonomous operations. The platform used is
-ArduPilot open source hardware, along with a Jetson TX2 companion computer handling the autonomy of the system. The system
-is built on the Robot Operating System (ROS) software framework and communicates using a MAVLink protocol. ROS allows us to integrate various sensors onto the rover such as a LIDAR and camera. With the LIDAR we can detect obstacles and use SLAM algorithms to generate maps. Using these maps we can navigate through an explored space. The camera can be used for user operation as well as visual odometry to improve locational accuracy. ROS operates on a NVIDA Jetson which then communicates with the onboard rover controller with MAVROS. The rover in the picture is not the one the team design, but only for demonstration.
-    <div class="row text">
-    <div class="col-sm-3">
-      <img src="media/09/rover.jpg" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <img src="media/09/jetson.png" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <img src="media/09/ros.png" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <img src="media/09/map.png" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-  </div>
-</div><br><br>
-
-<div class="container-fluid bg-3 text-center" style="margin-left: 100px; margin-right:100px;">
-  <h3>Hand-held Cube Game</h3><br>
-  <p> For the final project in my Advanced Embedded Systems Design Class my team was tasked with developing a hand-held game by implementing a Real-Time Operating System (RTOS) using a TI TM4C123G
-microcontroller to interact with the TI Educational BoosterPack MKII, which incorporates an analog joystick, RGB LED,
-microphone, buzzer, color LCD display, buttons, accelerometer, etc.
-The system for this project included the joystick, both buttons, and the accelerometer for physical interaction, and an LCD screen for visualization. The new features included a menu, instructions, chill mode, and accelerometer data used to enter the bonus mode by shaking the console. Figure 1 is a flowchart of the final system.
-    <div class="row text">
-    <div class="col-sm-3">
-      <img src="media/08/menu.png" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <img src="media/08/special.png" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <img src="media/08/score.png" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <img src="media/08/case.png" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-  </div>
-</div><br><br>
 
 
-<div class="container-fluid bg-3 text-center" style="margin-left: 100px; margin-right:100px;">
-  <h3>Lock-Box</h3><br>
-  <p>The Lock-Box is a project inspired by the need for some students to buy really expensive textbooks for a class. This project focused on designing a smart book-storing and book-sharing system that would allow multiple users to store a textbook in the box and the box would record whether a book was present at the moment or not. The user would need to register with the system and obtain their unique passcode to the box. This user can then add other users to the box in order to start sharing the books. The box uses pressure sensors to determine whether an object is placed on the shelf of the box (detecting a book) and detects whether a shelf is empty or full, updating a database and a website that is used to provide the user with system feedback. The system also features an LCD display that allows the user to see its passcode input. This project was the final project for my Integrated Systems Design class.</p>
-  <div class="row text" style="margin-left: 150px;">
-    <div class="col-sm-3">
-      <img src="media/06/lockbox1.jpeg" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <img src="media/06/lockbox2.jpeg" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <img src="media/06/lockbox3.jpeg" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-  </div>
-</div><br><br>
+<h2 style="text-align:center"></h2>
 
-<div class="container-fluid bg-3 text-center" style="margin-left: 100px; margin-right:100px;">
-  <h3>Semi-Autonomous Delivery Robot</h3><br>
-  <p>This project was an extension to project from a previous semester. A couple of semesters back a couple of students and I built a robot from scratch that used a couple of sensors to follow a leader and stay within a certain distance. This time we changed it a little bit by making it a delivery robot that would go to a certain destination taking the shortest path. The shortest path is calculated using an algorithm that takes into account the destinations and each distance between all destinations. We also created a very simple website that allowed us to enter the destination we wanted our robot to go to, so that it can then be saved in a database and be accessed by the robot when it is doing a delivery. The robot accesses the information that was saved in a database, calculates the shortest path to that destination and produces a sequence of commands for the robot to take. We stored the list of destinations in a database and then recorded the ones that had been completed and the ones that still hadn't completed.  Using the CC300 Wifi chip, we were able to access the database shown in this picture. The database kept being updated as new destinations were entered as well as when the robot completed a delivery.</p>
-  <div class="row text" style="margin-left: 150px;">
-    <div class="col-sm-3">
-      <img src="media/05/delivery1.jpeg" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <img src="media/05/delivery2.png" class="img-responsive" style="margin-top:100px ;width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <img src="media/05/delivery3.png" class="img-responsive" style="margin-top:100px ;width:100%" alt="Image">
-    </div>
-  </div>
-</div><br><br>
 
-<div class="container-fluid bg-3 text-center" style="margin-left: 100px; margin-right:100px;">
-  <h3>Accelerometer Controlled LEDs</h3><br>
-  <p>This project was my final project for my Embedded System Design class. It consists of an accelerometer that measures the tilt of the system from the x-y plane, as well as the direction its facing in order to control an array of LEDs that are positioned to represent cardinal directions using an MSP430 microcontroller. In the first picture, the system is leveled and therefore all LEDs shine at the same brightness. However, when the system starts to tilt, the LED closest to the ground exhibits a brighter intensity and the ones farther from the ground begin to decrease in intensity. In second picture, the LED closest to the ground is in the East position so it shines brighter than the others. In the last picture, we can see the system rotated once again, and now the LED that is closest to the ground is the one facing north, so it shines brighter than the others.</p>
-  <div class="row text" style="margin-left: 150px;">
-    <div class="col-sm-3">
-      <img src="media/04/embedded1.jpg" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <img src="media/04/embedded2.jpg" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <img src="media/04/embedded3.jpg" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-  </div>
-</div><br><br>
+<!-- FIRST ROWWWW -->
 
-<div class="container-fluid bg-3 text-center" style="margin-left: 100px; margin-right:100px;">
-  <h3>EKG Sensor Printed Circuit Board</h3><br>
-  <p>This project was my final project for my Fundamentals of Electrical Engineering 3 class. It takes 3 inputs that are very low voltage signals from the body and is able to amplify that signal in order to be able to see a heart rate. We assembled the components of the printed circuit board and tested each part of the system individually in order to then test it as a whole. The final design for this project (3rd picture) was powered by an external battery and used different circuit components to amplify the signal and get rid of unwanted frequencies in order to isolate the heart signal. The board was completely designed and soldered by students. By the end of the testing stage, we were able to attach the electrodes to the body and see a heart rate in the monitor.</p>
-  <div class="row text">
-    <div class="col-sm-3">
-      <img src="media/03/ekg1.jpg" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <img src="media/03/ekg3.jpg" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <img src="media/03/ekg4.jpg" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <img src="media/03/signal.png" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-  </div>
-</div><br><br>
+<div class="row">
+  <div class="column">
+    <div class="card">
 
+      <div class="slideshow-container">
+        <div class="mySlides1 fade"> 
+          <img src="media/10/LAB_SETUP.jpg" style="width:100%">
+        </div>
+        <div class="mySlides1 fade"> 
+          <img src="media/10/pic.jpg" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a> <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+        <div style="text-align:center"> <span class="dot" onclick="currentSlide(1,0)"></span> <span class="dot" onclick="currentSlide(2,0)"></span></div>
+      </div>
+
+      <div class="container">
+        <h3>Weather Satellite Receiver</h3>
+        <p class="title">Fall 2019</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. </p>
+      </div>
+    </div>
+  </div>  
+
+  <div class="column">
+    <div class="card">
+
+      <div class="slideshow-container">
+        <div class="mySlides2 fade"> 
+          <img src="media/09/ugv.JPG" style="width:100%">
+        </div>
+        <div class="mySlides2 fade"> 
+          <img src="media/09/map.png" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a> <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+        <div style="text-align:center"> <span class="dot" onclick="currentSlide(1,1)"></span> <span class="dot" onclick="currentSlide(2,1)"></span> </div>
+      </div>
+
+      <div class="container">
+        <h3>Semi-Autonomous Unmanned Ground Vehicle</h3>
+        <p class="title">Fall 2018 - Spring 2019</p>
+        <p>Collaborated in an interdisciplinary group of 5 engineering students to design a 3-D printed UGV capable of switching manual and autonomous operations. The platform used is ArduPilot open source hardware, along with a Jetson TX2 companion computer handling the autonomy of the system. The system is built on the Robot Operating System (ROS) software framework and communicates using a MAVLink protocol. ROS allows us to integrate various sensors onto the rover such as a LIDAR and camera. With the LIDAR we can detect obstacles and use SLAM algorithms to generate maps. Using these maps we can navigate through an explored space. The camera can be used for user operation as well as visual odometry to improve locational accuracy. ROS operates on a NVIDA Jetson which then communicates with the onboard rover controller with MAVROS. The rover in the picture is not the one the team design, but only for demonstration. </p>
+      </div>
+    </div>
+  </div>  
+
+
+  <div class="column">
+    <div class="card">
+
+      <div class="slideshow-container">
+        <div class="mySlides3 fade"> 
+          <img src="media/08/boosterpack.JPG" style="width:100%">
+        </div>
+        <div class="mySlides3 fade"> 
+          <img src="media/08/menu.png" style="width:100%">
+        </div>
+        <div class="mySlides3 fade"> 
+          <img src="media/08/special.png" style="width:100%">
+        </div>
+        <div class="mySlides3 fade"> 
+          <img src="media/08/case.png" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a> <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+        <div style="text-align:center"> <span class="dot" onclick="currentSlide(1,2)"></span> <span class="dot" onclick="currentSlide(2,2)"></span> <span class="dot" onclick="currentSlide(3,2)"></span> <span class="dot" onclick="currentSlide(4,2)"></span> </div>
+      </div>
+
+      <div class="container">
+        <h3>RTOS Hand-held Cube Game</h3>
+        <p class="title">Fall 2018</p>
+        <p>For the final project in my Advanced Embedded Systems Design Class my team was tasked with developing a hand-held game by implementing a Real-Time Operating System (RTOS) using a TI TM4C123G microcontroller to interact with the TI Educational BoosterPack MKII, which incorporates an analog joystick, RGB LED, microphone, buzzer, color LCD display, buttons, accelerometer, etc. The system for this project included the joystick, both buttons, and the accelerometer for physical interaction, and an LCD screen for visualization. The new features included a menu, instructions, chill mode, and accelerometer data used to enter the bonus mode by shaking the console. Figure 1 is a flowchart of the final system. </p>
+      </div>
+    </div>
+  </div>  
+
+</div>
+
+<!-- SECOND ROWWWW -->
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+
+      <div class="slideshow-container">
+        <div class="mySlides4 fade"> 
+          <img src="media/07/diagram.jpg" style="width:100%">
+        </div>
+        <div class="mySlides4 fade"> 
+          <img src="media/07/schematic1.PNG" style="width:100%">
+        </div>
+        <div class="mySlides4 fade"> 
+          <img src="media/07/schematic3.PNG" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1, 3)">&#10094;</a> <a class="next" onclick="plusSlides(1, 3)">&#10095;</a>
+        <div style="text-align:center"> <span class="dot" onclick="currentSlide(1,3)"></span> <span class="dot" onclick="currentSlide(2,3)"></span> <span class="dot" onclick="currentSlide(3,3)"></span> </div>
+      </div>
+
+      <div class="container">
+        <h3>RISC-V Pipelined Processor using VHDL</h3>
+        <p class="title">Spring 2018</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. </p>
+      </div>
+    </div>
+  </div>  
+
+
+
+  <div class="column">
+    <div class="card">
+
+      <div class="slideshow-container">
+        <div class="mySlides5 fade"> 
+          <img src="media/06/lockbox1.jpeg" style="width:100%">
+        </div>
+        <div class="mySlides5 fade"> 
+          <img src="media/06/sketch.JPG" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1, 4)">&#10094;</a> <a class="next" onclick="plusSlides(1, 4)">&#10095;</a>
+        <div style="text-align:center"> <span class="dot" onclick="currentSlide(1,4)"></span> <span class="dot" onclick="currentSlide(2,4)"></span> </div>
+      </div>
+
+      <div class="container">
+        <h3>LockBox</h3>
+        <p class="title">Spring 2018</p>
+        <p>The Lock-Box is a project inspired by the need for some students to buy really expensive textbooks for a class. This project focused on designing a smart book-storing and book-sharing system that would allow multiple users to store a textbook in the box and the box would record whether a book was present at the moment or not. The user would need to register with the system and obtain their unique passcode to the box. This user can then add other users to the box in order to start sharing the books. The box uses pressure sensors to determine whether an object is placed on the shelf of the box (detecting a book) and detects whether a shelf is empty or full, updating a database and a website that is used to provide the user with system feedback. The system also features an LCD display that allows the user to see its passcode input. This project was the final project for my Integrated Systems Design class. </p>
+      </div>
+    </div>
+  </div>  
+
+
+
+  <div class="column">
+    <div class="card">
+
+      <div class="slideshow-container">
+        <div class="mySlides6 fade"> 
+          <img src="media/05/delivery1.jpeg" style="width:100%">
+        </div>
+        <div class="mySlides6 fade"> 
+          <img src="media/05/delivery2.png" style="width:100%">
+        </div>
+        <div class="mySlides6 fade"> 
+          <img src="media/05/delivery3.png" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1, 5)">&#10094;</a> <a class="next" onclick="plusSlides(1, 5)">&#10095;</a>
+        <div style="text-align:center"> <span class="dot" onclick="currentSlide(1,5)"></span> <span class="dot" onclick="currentSlide(2,5)"></span><span class="dot" onclick="currentSlide(3,5)"></span> </div>
+      </div>
+
+      <div class="container">
+        <h3>Line-Following Delivery Robot</h3>
+        <p class="title">Fall 2017</p>
+        <p>This project was an extension to project from a previous semester. A couple of semesters back a couple of students and I built a robot from scratch that used a couple of sensors to follow a leader and stay within a certain distance. This time we changed it a little bit by making it a delivery robot that would go to a certain destination taking the shortest path. The shortest path is calculated using an algorithm that takes into account the destinations and each distance between all destinations. We also created a very simple website that allowed us to enter the destination we wanted our robot to go to, so that it can then be saved in a database and be accessed by the robot when it is doing a delivery. The robot accesses the information that was saved in a database, calculates the shortest path to that destination and produces a sequence of commands for the robot to take. We stored the list of destinations in a database and then recorded the ones that had been completed and the ones that still hadn't completed. Using the CC300 Wifi chip, we were able to access the database shown in this picture. The database kept being updated as new destinations were entered as well as when the robot completed a delivery. </p>
+      </div>
+    </div>
+  </div>  
+</div>
+
+<!-- THIRD ROWWWW  -->
+
+<div class="row">
+
+  <div class="column">
+    <div class="card">
+
+      <div class="slideshow-container">
+        <div class="mySlides7 fade"> 
+          <img src="media/04/embedded_stable.JPG" style="width:100%">
+        </div>
+        <div class="mySlides7 fade"> 
+          <img src="media/04/embedded2.jpg" style="width:100%">
+        </div>
+        <div class="mySlides7 fade"> 
+          <img src="media/04/embedded1.jpg" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1, 6)">&#10094;</a> <a class="next" onclick="plusSlides(1, 6)">&#10095;</a>
+        <div style="text-align:center"> <span class="dot" onclick="currentSlide(1,6)"></span> <span class="dot" onclick="currentSlide(2,6)"></span> <span class="dot" onclick="currentSlide(3,6)"></span></div>
+      </div>
+
+      <div class="container">
+        <h3>Accelerometer Controlled LEDs</h3>
+        <p class="title">Fall 2017</p>
+        <p>This project was my final project for my Embedded System Design class. It consists of an accelerometer that measures the tilt of the system from the x-y plane, as well as the direction its facing in order to control an array of LEDs that are positioned to represent cardinal directions using an MSP430 microcontroller. In the first picture, the system is leveled and therefore all LEDs shine at the same brightness. However, when the system starts to tilt, the LED closest to the ground exhibits a brighter intensity and the ones farther from the ground begin to decrease in intensity. In second picture, the LED closest to the ground is in the East position so it shines brighter than the others. In the last picture, we can see the system rotated once again, and now the LED that is closest to the ground is the one facing north, so it shines brighter than the others. </p>
+      </div>
+    </div>
+  </div>  
+
+
+  <div class="column">
+    <div class="card">
+
+      <div class="slideshow-container">
+        <div class="mySlides8 fade"> 
+          <img src="media/03/ekg3.jpg" style="width:100%">
+        </div>
+        <div class="mySlides8 fade"> 
+          <img src="media/03/ekgg.JPG" style="width:100%">
+        </div>
+        <div class="mySlides8 fade"> 
+          <img src="media/03/ekg4.jpg" style="width:100%">
+        </div>
+        <div class="mySlides8 fade"> 
+          <img src="media/03/signal.Png" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1, 7)">&#10094;</a> <a class="next" onclick="plusSlides(1, 7)">&#10095;</a>
+        <div style="text-align:center"> <span class="dot" onclick="currentSlide(1,7)"></span> <span class="dot" onclick="currentSlide(2,7)"></span> <span class="dot" onclick="currentSlide(3,7)"></span> <span class="dot" onclick="currentSlide(4,7)"></span> </div>
+      </div>
+
+      <div class="container">
+        <h3>Electrocardiogram Sensor PCB</h3>
+        <p class="title">Fall 2017</p>
+        <p>This project was my final project for my Fundamentals of Electrical Engineering 3 class. It takes 3 inputs that are very low voltage signals from the body and is able to amplify that signal in order to be able to see a heart rate. We assembled the components of the printed circuit board and tested each part of the system individually in order to then test it as a whole. The final design for this project (3rd picture) was powered by an external battery and used different circuit components to amplify the signal and get rid of unwanted frequencies in order to isolate the heart signal. The board was completely designed and soldered by students. By the end of the testing stage, we were able to attach the electrodes to the body and see a heart rate in the monitor. </p>
+      </div>
+    </div>
+  </div>  
+
+
+  <div class="column">
+    <div class="card">
+
+      <div class="slideshow-container">
+        <div class="mySlides9 fade"> 
+          <img src="media/02/robot_model.JPG" style="width:100%">
+        </div>
+        <div class="mySlides9 fade"> 
+          <img src="media/05/delivery1.jpeg" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1, 8)">&#10094;</a> <a class="next" onclick="plusSlides(1, 8)">&#10095;</a>
+        <div style="text-align:center"> <span class="dot" onclick="currentSlide(1,8)"></span> <span class="dot" onclick="currentSlide(2,8)"></span> </div>
+      </div>
+
+      <div class="container">
+        <h3>Line Following Robot</h3>
+        <p class="title">Spring 2017</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. </p>
+      </div>
+    </div>
+  </div>  
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+
+      <div class="slideshow-container">
+        <div class="mySlides10 fade"> 
+          <img src="media/01/pcb.JPG" style="width:100%">
+        </div>
+        <div class="mySlides10 fade"> 
+          <img src="media/01/schematic.JPG" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1, 9)">&#10094;</a> <a class="next" onclick="plusSlides(1, 9)">&#10095;</a>
+        <div style="text-align:center"> <span class="dot" onclick="currentSlide(1,9)"></span> <span class="dot" onclick="currentSlide(2,9)"></span> </div>
+      </div>
+
+      <div class="container">
+        <h3>Audio Spectrum Analyzer</h3>
+        <p class="title">Spring 2017</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. Some text that describes me lorem ipsum ipsum lorem. </p>
+      </div>
+    </div>
+  </div>  
+</div>
+
+
+<script>
+var slideIndex = [1,1,1,1,1,1,1,1,1,1];
+var slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5", "mySlides6", "mySlides7", "mySlides8", "mySlides9", "mySlides10"]
+showSlides(1, 0);
+showSlides(1, 1);
+showSlides(1, 2);
+showSlides(1, 3);
+showSlides(1, 4);
+showSlides(1, 5);
+showSlides(1, 6);
+showSlides(1, 7);
+showSlides(1, 8);
+showSlides(1, 9);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+function currentSlide(n, no) {
+  showSlides(slideIndex[no] = n, no);
+}
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+</script>
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-center w3-black w3-large">
